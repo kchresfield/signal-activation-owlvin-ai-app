@@ -10,7 +10,7 @@ export default function LoginPage() {
 
   const handleLogin = () => {
     if (phone.length === 10) {
-      localStorage.setItem('phone', phone);
+      sessionStorage.setItem('phone', phone);
       router.push('/game');
     } else if(!phone){
       // 

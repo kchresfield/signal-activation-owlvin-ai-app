@@ -44,18 +44,18 @@ export default function GamePage() {
     if (step === 1) {
       const selected = personalityTraits[index1].name;
       console.log('Selected Personality:', selected);
-      localStorage.setItem('personality', selected);
-      console.log(localStorage.getItem('personality'))
+      sessionStorage.setItem('personality', selected);
+      console.log(sessionStorage.getItem('personality'))
       setStep(2); // move to second carousel
     } else if(step === 2){
       const selected = toneTraits[index2].name;
       console.log('Selected Tone of Voice:', selected);
-      localStorage.setItem('tone', selected);
+      sessionStorage.setItem('tone', selected);
       setStep(3);
     } else if(step === 3){
       const selected = topics[topicIndex];
       console.log('Selected Topic:', selected);
-      localStorage.setItem('topic', selected);
+      sessionStorage.setItem('topic', selected);
       router.push('/completed');
     }
   };

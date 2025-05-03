@@ -8,10 +8,10 @@ export default function getLocalVars() {
 
     // useEffect(() => {
     
-    phoneNumber = localStorage.getItem("phone") //? JSON.parse(localStorage.getItem("phone")) : null;
-    personality = localStorage.getItem("personality") //? JSON.parse(localStorage.getItem("personality")) : null;
-    tone = localStorage.getItem("tone") //? JSON.parse(localStorage.getItem("tone")) : null;
-    topic = localStorage.getItem("topic")
+    phoneNumber = sessionStorage.getItem("phone") //? JSON.parse(localStorage.getItem("phone")) : null;
+    personality = sessionStorage.getItem("personality") //? JSON.parse(localStorage.getItem("personality")) : null;
+    tone = sessionStorage.getItem("tone") //? JSON.parse(localStorage.getItem("tone")) : null;
+    topic = sessionStorage.getItem("topic")
   
       
 

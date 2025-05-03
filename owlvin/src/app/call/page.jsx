@@ -17,10 +17,10 @@ export default function CallPage() {
   const startOver = async () => {
     try{
       // delete local vars
-      localStorage.removeItem("phone");
-      localStorage.removeItem("personality");
-      localStorage.removeItem("tone");
-      localStorage.removeItem("topic");
+      sessionStorage.removeItem("phone");
+      sessionStorage.removeItem("personality");
+      sessionStorage.removeItem("tone");
+      sessionStorage.removeItem("topic");
       router.push('/')
     } catch (err) {
       console.error('Error creating assistant:', err);
