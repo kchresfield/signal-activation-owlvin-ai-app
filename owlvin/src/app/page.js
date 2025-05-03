@@ -66,7 +66,7 @@ export default function LoginPage() {
       
       
         <h3 className="text-center">
-          By providing your phone number, you're showing intent to allow us to use your phone number. ~Legal babble~ Check out twilio.com/privacy.
+          By providing your phone number, you are showing intent to allow us to use your phone number. Legal babble Check out twilio.com/privacy.
         </h3>
     </div>
   );
