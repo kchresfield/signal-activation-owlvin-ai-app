@@ -13,10 +13,13 @@ export default function CompletedPage() {
   useEffect(() => {
     const vars = getLocalVars();
     setLocalVars(vars);
+    console.log("here are the local vars: ", vars)
   }, []);
 
   function createImgSrcStr(name) {
-    let value = localVars[name]
+    let val = localVars[name];
+    let value = val.toLowerCase();
+    console.log("value: ", value)
     return `/icons/${value}.png`
   }
 
@@ -71,6 +74,7 @@ export default function CompletedPage() {
             alt="tone"
             width={200}
             height={200}
+            unoptimized
           />
           <h3 className="text-center">{localVars.tone}</h3>
           </div>

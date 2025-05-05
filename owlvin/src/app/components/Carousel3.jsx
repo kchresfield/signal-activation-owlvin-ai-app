@@ -20,10 +20,9 @@ export default function Carousel3({topics, index, setIndex}) {
 
     const topicsMap = [
       "Existential Philosophy & Meaning of Life",
-      'Sarcastic Life Coaching & "Motivational" Advice',
-      "Tourism and thing to do in San Francisco",
-      "Space Exploration & The Future of Humanity",
-      "Useless but Fascinating Scientific Facts",
+      "Artificial Intelligence & The Ethics of AI",
+      "Tourism and things to do in San Francisco",
+      "Science Fiction, Movies & Pop Culture"
     ];
   
     return (
