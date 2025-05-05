@@ -1,21 +1,17 @@
 import { useEffect, useState } from 'react';
 
 export default function getLocalVars() {
+    if (typeof window === 'undefined') return null;
+    
     let phoneNumber;
     let personality;
     let tone;
     let topic;
-
-    // useEffect(() => {
     
-    phoneNumber = sessionStorage.getItem("phone") //? JSON.parse(localStorage.getItem("phone")) : null;
-    personality = sessionStorage.getItem("personality") //? JSON.parse(localStorage.getItem("personality")) : null;
-    tone = sessionStorage.getItem("tone") //? JSON.parse(localStorage.getItem("tone")) : null;
-    topic = sessionStorage.getItem("topic")
+    phoneNumber = sessionStorage.getItem("phone");
+    personality = sessionStorage.getItem("personality");
+    tone = sessionStorage.getItem("tone");
+    topic = sessionStorage.getItem("topic");
   
-      
-
-    // }, [])
     return {phoneNumber, personality, tone, topic}
-
 }

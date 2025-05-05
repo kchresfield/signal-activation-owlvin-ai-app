@@ -1,5 +1,4 @@
 'use client';
-import { useState, useContext, useFormState } from 'react';
 import { useRouter } from 'next/navigation';
 import useIsMobile from '../hooks/platform-detection';
 import Image from 'next/image';
@@ -9,8 +8,6 @@ import getLocalVars from '../hooks/getLocalVars';
 
 export default function CallPage() {
   const isMobile = useIsMobile();
-
-  const localVars = getLocalVars();
   const router = useRouter();
 
 
