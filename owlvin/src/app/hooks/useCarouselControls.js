@@ -10,13 +10,14 @@ export default function useCarouselControls({ isMobile, onLeft, onRight, onUp, o
 
     const handleTouchStart = (e) => {
       touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY; 
     };
 
     const handleTouchEnd = (e) => {
       const touchEndX = e.changedTouches[0].clientX;
       const touchEndY = e.changedTouches[0].clientY;
       const deltaY = touchEndY - touchStartY;
-      const deltaX = touchEndX = touchStartX;
+      const deltaX = touchEndX - touchStartX;
       
       // Distinguish between up and down motions for different carousels
       if (Math.abs(deltaX) > Math.abs(deltaY)) { // Horizontal swipe
