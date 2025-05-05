@@ -7,10 +7,13 @@ import getLocalVars from '../hooks/getLocalVars';
 // import createAssistant from '../api/create-assistant'
 
 export default function CompletedPage() {
-
-  const localVars = getLocalVars();
+  const [localVars, setLocalVars] = useState(null);
   const router = useRouter();
 
+  useEffect(() => {
+    const vars = getLocalVars();
+    setLocalVars(vars);
+  }, []);
 
   function createImgSrcStr(name) {
     let value = localVars[name]
@@ -36,18 +39,13 @@ export default function CompletedPage() {
     } catch (err) {
       console.error('Error creating assistant:', err);
     }
-
-
-
-
-    // save phone number, assistantID, and threadId in firebase
-    // console.log(phoneNumber, personality, tone)
-    // console.log(localVars) 
   };
   const handleBack = () => {
     // go back to game page
     router.push('/game');
   };
+
+  if (!localVars) return <div className="p-8 text-white">Loading...</div>;
   return (
     <div className="min-h-screen bg-blue-500 text-white flex flex-col">
       {/* Top title */}

@@ -25,10 +25,9 @@ const toneTraits = [
 
 const topics = [
   "Existential Philosophy & Meaning of Life",
-  'Sarcastic Life Coaching & "Motivational" Advice',
+  "Artificial Intelligence & The Ethics of AI",
   "Tourism and things to do in San Francisco",
-  "Space Exploration & The Future of Humanity",
-  "Useless but Fascinating Scientific Facts",
+  "Science Fiction, Movies & Pop Culture"
 ];
 
 
